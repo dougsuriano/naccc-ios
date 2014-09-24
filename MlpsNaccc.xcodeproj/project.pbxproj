@@ -1,0 +1,785 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A3BE03019A156BF000F31E7 /* DCBBasicObjectDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3BE02F19A156BF000F31E7 /* DCBBasicObjectDeserializer.m */; };
+		2A3BE03219A15B87000F31E7 /* DCBAvailableCheckpointsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3BE03119A15B87000F31E7 /* DCBAvailableCheckpointsViewController.xib */; };
+		2A3BE03619A1659F000F31E7 /* DCBCheckpointControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3BE03419A1659F000F31E7 /* DCBCheckpointControlViewController.m */; };
+		2A3BE03719A1659F000F31E7 /* DCBCheckpointControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3BE03519A1659F000F31E7 /* DCBCheckpointControlViewController.xib */; };
+		2A3BE03B19A17BAA000F31E7 /* DCBRacer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3BE03A19A17BAA000F31E7 /* DCBRacer.m */; };
+		2A3BE03F19A17CC9000F31E7 /* DCBSimpleRacerCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3BE03E19A17CC9000F31E7 /* DCBSimpleRacerCache.m */; };
+		2A439C6119A26D9100BE8DE8 /* DCBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A439C6019A26D9100BE8DE8 /* DCBNavigationController.m */; };
+		2A85859119D2927500FEBF21 /* DCBLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A85859019D2927500FEBF21 /* DCBLoginViewController.xib */; };
+		2ABE4AC6198EDFC30058B53F /* DCBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABF1BD8198EDF1F00882F02 /* DCBLoginViewController.m */; };
+		2ABE4AC7198EDFC30058B53F /* DCBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABF1BD2198EDF1F00882F02 /* DCBAppDelegate.m */; };
+		2ABE4AC8198EDFC30058B53F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABF1BCE198EDF1F00882F02 /* main.m */; };
+		2ABE4ACA198EDFC30058B53F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABF1BC4198EDF1F00882F02 /* CoreGraphics.framework */; };
+		2ABE4ACB198EDFC30058B53F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABF1BC6198EDF1F00882F02 /* UIKit.framework */; };
+		2ABE4ACC198EDFC30058B53F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABF1BC2198EDF1F00882F02 /* Foundation.framework */; };
+		2ABE4ACE198EDFC30058B53F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ABF1BDA198EDF1F00882F02 /* Images.xcassets */; };
+		2ABE4ACF198EDFC30058B53F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2ABF1BCB198EDF1F00882F02 /* InfoPlist.strings */; };
+		2ABE4AD8198EE38E0058B53F /* DCBAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE4AD7198EE38E0058B53F /* DCBAPIManager.m */; };
+		2ABE4AD9198EE38E0058B53F /* DCBAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE4AD7198EE38E0058B53F /* DCBAPIManager.m */; };
+		2ABE4AE1198F21100058B53F /* DCBCheckpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE4AE0198F21100058B53F /* DCBCheckpoint.m */; };
+		2ABE4AE2198F21100058B53F /* DCBCheckpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE4AE0198F21100058B53F /* DCBCheckpoint.m */; };
+		2ABF1BC3198EDF1F00882F02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABF1BC2198EDF1F00882F02 /* Foundation.framework */; };
+		2ABF1BC5198EDF1F00882F02 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABF1BC4198EDF1F00882F02 /* CoreGraphics.framework */; };
+		2ABF1BC7198EDF1F00882F02 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABF1BC6198EDF1F00882F02 /* UIKit.framework */; };
+		2ABF1BCD198EDF1F00882F02 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2ABF1BCB198EDF1F00882F02 /* InfoPlist.strings */; };
+		2ABF1BCF198EDF1F00882F02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABF1BCE198EDF1F00882F02 /* main.m */; };
+		2ABF1BD3198EDF1F00882F02 /* DCBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABF1BD2198EDF1F00882F02 /* DCBAppDelegate.m */; };
+		2ABF1BD9198EDF1F00882F02 /* DCBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABF1BD8198EDF1F00882F02 /* DCBLoginViewController.m */; };
+		2ABF1BDB198EDF1F00882F02 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ABF1BDA198EDF1F00882F02 /* Images.xcassets */; };
+		2ABF1BE2198EDF1F00882F02 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABF1BE1198EDF1F00882F02 /* XCTest.framework */; };
+		2ABF1BE3198EDF1F00882F02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABF1BC2198EDF1F00882F02 /* Foundation.framework */; };
+		2ABF1BE4198EDF1F00882F02 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABF1BC6198EDF1F00882F02 /* UIKit.framework */; };
+		2ABF1BEC198EDF1F00882F02 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2ABF1BEA198EDF1F00882F02 /* InfoPlist.strings */; };
+		2ABF1BEE198EDF1F00882F02 /* MlpsNacccTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABF1BED198EDF1F00882F02 /* MlpsNacccTests.m */; };
+		2AFA89AE198F2829005EB915 /* DCBArrayTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA89AD198F2829005EB915 /* DCBArrayTableDataSource.m */; };
+		2AFA89AF198F2829005EB915 /* DCBArrayTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA89AD198F2829005EB915 /* DCBArrayTableDataSource.m */; };
+		2AFA89B3198F2C7B005EB915 /* DCBAvailableCheckpointsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA89B2198F2C7B005EB915 /* DCBAvailableCheckpointsViewController.m */; };
+		2AFA89B4198F2C7B005EB915 /* DCBAvailableCheckpointsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFA89B2198F2C7B005EB915 /* DCBAvailableCheckpointsViewController.m */; };
+		9B437E88BA2142EDB94F647B /* libPods-Integration Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E8FCCB428B40ECB584C1AF /* libPods-Integration Tests.a */; };
+		ECB2F7C7565C40C09EC78913 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B295C276BE46838654F2CD /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2ABF1BE5198EDF1F00882F02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2ABF1BB7198EDF1F00882F02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2ABF1BBE198EDF1F00882F02;
+			remoteInfo = MlpsNaccc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		23E8FCCB428B40ECB584C1AF /* libPods-Integration Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Integration Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A3BE02E19A156BF000F31E7 /* DCBBasicObjectDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCBBasicObjectDeserializer.h; path = MlpsNaccc/DCBBasicObjectDeserializer.h; sourceTree = "<group>"; };
+		2A3BE02F19A156BF000F31E7 /* DCBBasicObjectDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCBBasicObjectDeserializer.m; path = MlpsNaccc/DCBBasicObjectDeserializer.m; sourceTree = "<group>"; };
+		2A3BE03119A15B87000F31E7 /* DCBAvailableCheckpointsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCBAvailableCheckpointsViewController.xib; sourceTree = "<group>"; };
+		2A3BE03319A1659F000F31E7 /* DCBCheckpointControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBCheckpointControlViewController.h; sourceTree = "<group>"; };
+		2A3BE03419A1659F000F31E7 /* DCBCheckpointControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBCheckpointControlViewController.m; sourceTree = "<group>"; };
+		2A3BE03519A1659F000F31E7 /* DCBCheckpointControlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCBCheckpointControlViewController.xib; sourceTree = "<group>"; };
+		2A3BE03819A17B77000F31E7 /* DCBRacerCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCBRacerCache.h; path = MlpsNaccc/DCBRacerCache.h; sourceTree = "<group>"; };
+		2A3BE03919A17BAA000F31E7 /* DCBRacer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBRacer.h; sourceTree = "<group>"; };
+		2A3BE03A19A17BAA000F31E7 /* DCBRacer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBRacer.m; sourceTree = "<group>"; };
+		2A3BE03D19A17CC9000F31E7 /* DCBSimpleRacerCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCBSimpleRacerCache.h; path = MlpsNaccc/DCBSimpleRacerCache.h; sourceTree = "<group>"; };
+		2A3BE03E19A17CC9000F31E7 /* DCBSimpleRacerCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCBSimpleRacerCache.m; path = MlpsNaccc/DCBSimpleRacerCache.m; sourceTree = "<group>"; };
+		2A439C5F19A26D9100BE8DE8 /* DCBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBNavigationController.h; sourceTree = "<group>"; };
+		2A439C6019A26D9100BE8DE8 /* DCBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBNavigationController.m; sourceTree = "<group>"; };
+		2A85859019D2927500FEBF21 /* DCBLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCBLoginViewController.xib; sourceTree = "<group>"; };
+		2AA371BB19A154D300036B37 /* DCBObjectDeserialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCBObjectDeserialization.h; path = MlpsNaccc/DCBObjectDeserialization.h; sourceTree = "<group>"; };
+		2ABE4AD4198EDFC30058B53F /* MlpsNaccc copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MlpsNaccc copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ABE4AD6198EE38E0058B53F /* DCBAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBAPIManager.h; sourceTree = "<group>"; };
+		2ABE4AD7198EE38E0058B53F /* DCBAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBAPIManager.m; sourceTree = "<group>"; };
+		2ABE4ADF198F21100058B53F /* DCBCheckpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBCheckpoint.h; sourceTree = "<group>"; };
+		2ABE4AE0198F21100058B53F /* DCBCheckpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBCheckpoint.m; sourceTree = "<group>"; };
+		2ABF1BBF198EDF1F00882F02 /* MlpsNaccc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MlpsNaccc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ABF1BC2198EDF1F00882F02 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2ABF1BC4198EDF1F00882F02 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2ABF1BC6198EDF1F00882F02 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2ABF1BCA198EDF1F00882F02 /* MlpsNaccc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MlpsNaccc-Info.plist"; sourceTree = "<group>"; };
+		2ABF1BCC198EDF1F00882F02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2ABF1BCE198EDF1F00882F02 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2ABF1BD0198EDF1F00882F02 /* MlpsNaccc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MlpsNaccc-Prefix.pch"; sourceTree = "<group>"; };
+		2ABF1BD1198EDF1F00882F02 /* DCBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DCBAppDelegate.h; path = MlpsNaccc/DCBAppDelegate.h; sourceTree = "<group>"; };
+		2ABF1BD2198EDF1F00882F02 /* DCBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DCBAppDelegate.m; path = MlpsNaccc/DCBAppDelegate.m; sourceTree = "<group>"; };
+		2ABF1BD7198EDF1F00882F02 /* DCBLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCBLoginViewController.h; sourceTree = "<group>"; };
+		2ABF1BD8198EDF1F00882F02 /* DCBLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCBLoginViewController.m; sourceTree = "<group>"; };
+		2ABF1BDA198EDF1F00882F02 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MlpsNaccc/Images.xcassets; sourceTree = "<group>"; };
+		2ABF1BE0198EDF1F00882F02 /* MlpsNacccTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MlpsNacccTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ABF1BE1198EDF1F00882F02 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2ABF1BE9198EDF1F00882F02 /* MlpsNacccTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MlpsNacccTests-Info.plist"; sourceTree = "<group>"; };
+		2ABF1BEB198EDF1F00882F02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2ABF1BED198EDF1F00882F02 /* MlpsNacccTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MlpsNacccTests.m; sourceTree = "<group>"; };
+		2AFA89AC198F2829005EB915 /* DCBArrayTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBArrayTableDataSource.h; sourceTree = "<group>"; };
+		2AFA89AD198F2829005EB915 /* DCBArrayTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBArrayTableDataSource.m; sourceTree = "<group>"; };
+		2AFA89B1198F2C7B005EB915 /* DCBAvailableCheckpointsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCBAvailableCheckpointsViewController.h; sourceTree = "<group>"; };
+		2AFA89B2198F2C7B005EB915 /* DCBAvailableCheckpointsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCBAvailableCheckpointsViewController.m; sourceTree = "<group>"; };
+		5D9746194BB24ECAB9E8152F /* Pods-Integration Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Integration Tests.xcconfig"; path = "Pods/Pods-Integration Tests.xcconfig"; sourceTree = "<group>"; };
+		65B295C276BE46838654F2CD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		882B4106D08246EF8EA4D886 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2ABE4AC9198EDFC30058B53F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABE4ACA198EDFC30058B53F /* CoreGraphics.framework in Frameworks */,
+				2ABE4ACB198EDFC30058B53F /* UIKit.framework in Frameworks */,
+				2ABE4ACC198EDFC30058B53F /* Foundation.framework in Frameworks */,
+				9B437E88BA2142EDB94F647B /* libPods-Integration Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ABF1BBC198EDF1F00882F02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABF1BC5198EDF1F00882F02 /* CoreGraphics.framework in Frameworks */,
+				2ABF1BC7198EDF1F00882F02 /* UIKit.framework in Frameworks */,
+				2ABF1BC3198EDF1F00882F02 /* Foundation.framework in Frameworks */,
+				ECB2F7C7565C40C09EC78913 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ABF1BDD198EDF1F00882F02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABF1BE2198EDF1F00882F02 /* XCTest.framework in Frameworks */,
+				2ABF1BE4198EDF1F00882F02 /* UIKit.framework in Frameworks */,
+				2ABF1BE3198EDF1F00882F02 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A3BE02C19A155A5000F31E7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2AA371BB19A154D300036B37 /* DCBObjectDeserialization.h */,
+				2A3BE03819A17B77000F31E7 /* DCBRacerCache.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		2A3BE02D19A1565C000F31E7 /* Object Deserialization */ = {
+			isa = PBXGroup;
+			children = (
+				2A3BE02E19A156BF000F31E7 /* DCBBasicObjectDeserializer.h */,
+				2A3BE02F19A156BF000F31E7 /* DCBBasicObjectDeserializer.m */,
+			);
+			name = "Object Deserialization";
+			sourceTree = "<group>";
+		};
+		2A3BE03C19A17CAD000F31E7 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				2A3BE03D19A17CC9000F31E7 /* DCBSimpleRacerCache.h */,
+				2A3BE03E19A17CC9000F31E7 /* DCBSimpleRacerCache.m */,
+			);
+			name = Cache;
+			sourceTree = "<group>";
+		};
+		2ABE4ADA198EE3950058B53F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2ABE4AD6198EE38E0058B53F /* DCBAPIManager.h */,
+				2ABE4AD7198EE38E0058B53F /* DCBAPIManager.m */,
+			);
+			name = API;
+			path = MlpsNaccc;
+			sourceTree = "<group>";
+		};
+		2ABE4ADE198EF8520058B53F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UI;
+			path = MlpsNaccc;
+			sourceTree = "<group>";
+		};
+		2ABE4AE3198F21140058B53F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2ABE4ADF198F21100058B53F /* DCBCheckpoint.h */,
+				2ABE4AE0198F21100058B53F /* DCBCheckpoint.m */,
+				2A3BE03919A17BAA000F31E7 /* DCBRacer.h */,
+				2A3BE03A19A17BAA000F31E7 /* DCBRacer.m */,
+			);
+			name = Models;
+			path = MlpsNaccc;
+			sourceTree = "<group>";
+		};
+		2ABF1BB6198EDF1F00882F02 = {
+			isa = PBXGroup;
+			children = (
+				2AFA89B0198F2832005EB915 /* Data Source */,
+				2AFA89AB198F27DC005EB915 /* View Controllers */,
+				2ABF1BD1198EDF1F00882F02 /* DCBAppDelegate.h */,
+				2ABF1BD2198EDF1F00882F02 /* DCBAppDelegate.m */,
+				2ABE4ADE198EF8520058B53F /* UI */,
+				2ABF1BDA198EDF1F00882F02 /* Images.xcassets */,
+				2ABF1BC9198EDF1F00882F02 /* Supporting Files */,
+				2ABE4ADA198EE3950058B53F /* API */,
+				2A3BE02D19A1565C000F31E7 /* Object Deserialization */,
+				2A3BE03C19A17CAD000F31E7 /* Cache */,
+				2A3BE02C19A155A5000F31E7 /* Protocols */,
+				2ABE4AE3198F21140058B53F /* Models */,
+				2ABF1BE7198EDF1F00882F02 /* MlpsNacccTests */,
+				2ABF1BC1198EDF1F00882F02 /* Frameworks */,
+				2ABF1BC0198EDF1F00882F02 /* Products */,
+				882B4106D08246EF8EA4D886 /* Pods.xcconfig */,
+				5D9746194BB24ECAB9E8152F /* Pods-Integration Tests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		2ABF1BC0198EDF1F00882F02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2ABF1BBF198EDF1F00882F02 /* MlpsNaccc.app */,
+				2ABF1BE0198EDF1F00882F02 /* MlpsNacccTests.xctest */,
+				2ABE4AD4198EDFC30058B53F /* MlpsNaccc copy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2ABF1BC1198EDF1F00882F02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2ABF1BC2198EDF1F00882F02 /* Foundation.framework */,
+				2ABF1BC4198EDF1F00882F02 /* CoreGraphics.framework */,
+				2ABF1BC6198EDF1F00882F02 /* UIKit.framework */,
+				2ABF1BE1198EDF1F00882F02 /* XCTest.framework */,
+				65B295C276BE46838654F2CD /* libPods.a */,
+				23E8FCCB428B40ECB584C1AF /* libPods-Integration Tests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2ABF1BC9198EDF1F00882F02 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2ABF1BCA198EDF1F00882F02 /* MlpsNaccc-Info.plist */,
+				2ABF1BCB198EDF1F00882F02 /* InfoPlist.strings */,
+				2ABF1BCE198EDF1F00882F02 /* main.m */,
+				2ABF1BD0198EDF1F00882F02 /* MlpsNaccc-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			path = MlpsNaccc;
+			sourceTree = "<group>";
+		};
+		2ABF1BE7198EDF1F00882F02 /* MlpsNacccTests */ = {
+			isa = PBXGroup;
+			children = (
+				2ABF1BED198EDF1F00882F02 /* MlpsNacccTests.m */,
+				2ABF1BE8198EDF1F00882F02 /* Supporting Files */,
+			);
+			path = MlpsNacccTests;
+			sourceTree = "<group>";
+		};
+		2ABF1BE8198EDF1F00882F02 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2ABF1BE9198EDF1F00882F02 /* MlpsNacccTests-Info.plist */,
+				2ABF1BEA198EDF1F00882F02 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2AFA89AB198F27DC005EB915 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2AFA89B1198F2C7B005EB915 /* DCBAvailableCheckpointsViewController.h */,
+				2AFA89B2198F2C7B005EB915 /* DCBAvailableCheckpointsViewController.m */,
+				2A3BE03119A15B87000F31E7 /* DCBAvailableCheckpointsViewController.xib */,
+				2ABF1BD7198EDF1F00882F02 /* DCBLoginViewController.h */,
+				2ABF1BD8198EDF1F00882F02 /* DCBLoginViewController.m */,
+				2A85859019D2927500FEBF21 /* DCBLoginViewController.xib */,
+				2A3BE03319A1659F000F31E7 /* DCBCheckpointControlViewController.h */,
+				2A3BE03419A1659F000F31E7 /* DCBCheckpointControlViewController.m */,
+				2A3BE03519A1659F000F31E7 /* DCBCheckpointControlViewController.xib */,
+				2A439C5F19A26D9100BE8DE8 /* DCBNavigationController.h */,
+				2A439C6019A26D9100BE8DE8 /* DCBNavigationController.m */,
+			);
+			name = "View Controllers";
+			path = MlpsNaccc;
+			sourceTree = "<group>";
+		};
+		2AFA89B0198F2832005EB915 /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				2AFA89AC198F2829005EB915 /* DCBArrayTableDataSource.h */,
+				2AFA89AD198F2829005EB915 /* DCBArrayTableDataSource.m */,
+			);
+			name = "Data Source";
+			path = MlpsNaccc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2ABE4AC4198EDFC30058B53F /* Integration Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ABE4AD1198EDFC30058B53F /* Build configuration list for PBXNativeTarget "Integration Tests" */;
+			buildPhases = (
+				B4408731D855403BBEBED2E6 /* Check Pods Manifest.lock */,
+				2ABE4AC5198EDFC30058B53F /* Sources */,
+				2ABE4AC9198EDFC30058B53F /* Frameworks */,
+				2ABE4ACD198EDFC30058B53F /* Resources */,
+				4F9D426A6A3D404D8C24B0CD /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Integration Tests";
+			productName = MlpsNaccc;
+			productReference = 2ABE4AD4198EDFC30058B53F /* MlpsNaccc copy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2ABF1BBE198EDF1F00882F02 /* MlpsNaccc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ABF1BF1198EDF1F00882F02 /* Build configuration list for PBXNativeTarget "MlpsNaccc" */;
+			buildPhases = (
+				7D439CBA03DF4F19851272A1 /* Check Pods Manifest.lock */,
+				2ABF1BBB198EDF1F00882F02 /* Sources */,
+				2ABF1BBC198EDF1F00882F02 /* Frameworks */,
+				2ABF1BBD198EDF1F00882F02 /* Resources */,
+				335FBF5AF8DE4BA38EA26995 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MlpsNaccc;
+			productName = MlpsNaccc;
+			productReference = 2ABF1BBF198EDF1F00882F02 /* MlpsNaccc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2ABF1BDF198EDF1F00882F02 /* MlpsNacccTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ABF1BF4198EDF1F00882F02 /* Build configuration list for PBXNativeTarget "MlpsNacccTests" */;
+			buildPhases = (
+				2ABF1BDC198EDF1F00882F02 /* Sources */,
+				2ABF1BDD198EDF1F00882F02 /* Frameworks */,
+				2ABF1BDE198EDF1F00882F02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2ABF1BE6198EDF1F00882F02 /* PBXTargetDependency */,
+			);
+			name = MlpsNacccTests;
+			productName = MlpsNacccTests;
+			productReference = 2ABF1BE0198EDF1F00882F02 /* MlpsNacccTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2ABF1BB7198EDF1F00882F02 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DCB;
+				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					2ABF1BBE198EDF1F00882F02 = {
+						DevelopmentTeam = R348UNP45L;
+					};
+					2ABF1BDF198EDF1F00882F02 = {
+						TestTargetID = 2ABF1BBE198EDF1F00882F02;
+					};
+				};
+			};
+			buildConfigurationList = 2ABF1BBA198EDF1F00882F02 /* Build configuration list for PBXProject "MlpsNaccc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2ABF1BB6198EDF1F00882F02;
+			productRefGroup = 2ABF1BC0198EDF1F00882F02 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2ABF1BBE198EDF1F00882F02 /* MlpsNaccc */,
+				2ABF1BDF198EDF1F00882F02 /* MlpsNacccTests */,
+				2ABE4AC4198EDFC30058B53F /* Integration Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2ABE4ACD198EDFC30058B53F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABE4ACE198EDFC30058B53F /* Images.xcassets in Resources */,
+				2ABE4ACF198EDFC30058B53F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ABF1BBD198EDF1F00882F02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A3BE03219A15B87000F31E7 /* DCBAvailableCheckpointsViewController.xib in Resources */,
+				2ABF1BDB198EDF1F00882F02 /* Images.xcassets in Resources */,
+				2ABF1BCD198EDF1F00882F02 /* InfoPlist.strings in Resources */,
+				2A3BE03719A1659F000F31E7 /* DCBCheckpointControlViewController.xib in Resources */,
+				2A85859119D2927500FEBF21 /* DCBLoginViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ABF1BDE198EDF1F00882F02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABF1BEC198EDF1F00882F02 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		335FBF5AF8DE4BA38EA26995 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F9D426A6A3D404D8C24B0CD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Integration Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D439CBA03DF4F19851272A1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B4408731D855403BBEBED2E6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2ABE4AC5198EDFC30058B53F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AFA89B4198F2C7B005EB915 /* DCBAvailableCheckpointsViewController.m in Sources */,
+				2ABE4AC6198EDFC30058B53F /* DCBLoginViewController.m in Sources */,
+				2ABE4AC7198EDFC30058B53F /* DCBAppDelegate.m in Sources */,
+				2AFA89AF198F2829005EB915 /* DCBArrayTableDataSource.m in Sources */,
+				2ABE4AC8198EDFC30058B53F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ABF1BBB198EDF1F00882F02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABE4AD8198EE38E0058B53F /* DCBAPIManager.m in Sources */,
+				2A439C6119A26D9100BE8DE8 /* DCBNavigationController.m in Sources */,
+				2ABF1BD9198EDF1F00882F02 /* DCBLoginViewController.m in Sources */,
+				2ABF1BD3198EDF1F00882F02 /* DCBAppDelegate.m in Sources */,
+				2A3BE03F19A17CC9000F31E7 /* DCBSimpleRacerCache.m in Sources */,
+				2ABE4AE1198F21100058B53F /* DCBCheckpoint.m in Sources */,
+				2AFA89AE198F2829005EB915 /* DCBArrayTableDataSource.m in Sources */,
+				2A3BE03B19A17BAA000F31E7 /* DCBRacer.m in Sources */,
+				2ABF1BCF198EDF1F00882F02 /* main.m in Sources */,
+				2AFA89B3198F2C7B005EB915 /* DCBAvailableCheckpointsViewController.m in Sources */,
+				2A3BE03019A156BF000F31E7 /* DCBBasicObjectDeserializer.m in Sources */,
+				2A3BE03619A1659F000F31E7 /* DCBCheckpointControlViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ABF1BDC198EDF1F00882F02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABE4AE2198F21100058B53F /* DCBCheckpoint.m in Sources */,
+				2ABE4AD9198EE38E0058B53F /* DCBAPIManager.m in Sources */,
+				2ABF1BEE198EDF1F00882F02 /* MlpsNacccTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2ABF1BE6198EDF1F00882F02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2ABF1BBE198EDF1F00882F02 /* MlpsNaccc */;
+			targetProxy = 2ABF1BE5198EDF1F00882F02 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2ABF1BCB198EDF1F00882F02 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2ABF1BCC198EDF1F00882F02 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2ABF1BEA198EDF1F00882F02 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2ABF1BEB198EDF1F00882F02 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2ABE4AD2198EDFC30058B53F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D9746194BB24ECAB9E8152F /* Pods-Integration Tests.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MlpsNaccc/MlpsNaccc-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/MlpsNaccc/MlpsNaccc-Info.plist";
+				PRODUCT_NAME = "MlpsNaccc copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2ABE4AD3198EDFC30058B53F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D9746194BB24ECAB9E8152F /* Pods-Integration Tests.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MlpsNaccc/MlpsNaccc-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/MlpsNaccc/MlpsNaccc-Info.plist";
+				PRODUCT_NAME = "MlpsNaccc copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2ABF1BEF198EDF1F00882F02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2ABF1BF0198EDF1F00882F02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2ABF1BF2198EDF1F00882F02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 882B4106D08246EF8EA4D886 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MlpsNaccc/MlpsNaccc-Prefix.pch";
+				INFOPLIST_FILE = "MlpsNaccc/MlpsNaccc-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2ABF1BF3198EDF1F00882F02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 882B4106D08246EF8EA4D886 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MlpsNaccc/MlpsNaccc-Prefix.pch";
+				INFOPLIST_FILE = "MlpsNaccc/MlpsNaccc-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2ABF1BF5198EDF1F00882F02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MlpsNaccc.app/MlpsNaccc";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MlpsNaccc/MlpsNaccc-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MlpsNacccTests/MlpsNacccTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2ABF1BF6198EDF1F00882F02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MlpsNaccc.app/MlpsNaccc";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MlpsNaccc/MlpsNaccc-Prefix.pch";
+				INFOPLIST_FILE = "MlpsNacccTests/MlpsNacccTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2ABE4AD1198EDFC30058B53F /* Build configuration list for PBXNativeTarget "Integration Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ABE4AD2198EDFC30058B53F /* Debug */,
+				2ABE4AD3198EDFC30058B53F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2ABF1BBA198EDF1F00882F02 /* Build configuration list for PBXProject "MlpsNaccc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ABF1BEF198EDF1F00882F02 /* Debug */,
+				2ABF1BF0198EDF1F00882F02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2ABF1BF1198EDF1F00882F02 /* Build configuration list for PBXNativeTarget "MlpsNaccc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ABF1BF2198EDF1F00882F02 /* Debug */,
+				2ABF1BF3198EDF1F00882F02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2ABF1BF4198EDF1F00882F02 /* Build configuration list for PBXNativeTarget "MlpsNacccTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ABF1BF5198EDF1F00882F02 /* Debug */,
+				2ABF1BF6198EDF1F00882F02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2ABF1BB7198EDF1F00882F02 /* Project object */;
+}
