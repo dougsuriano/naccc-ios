@@ -12,11 +12,11 @@
 
 @property (nonatomic, strong) NSNumber *externalId;
 @property (nonatomic, strong) NSNumber *racerNumber;
-@property (nonatomic, strong) NSString *firstName;
-@property (nonatomic, strong) NSString *lastName;
-@property (nonatomic, strong) NSString *nickName;
-@property (nonatomic, strong) NSString *city;
-@property (nonatomic, strong) NSString *gender;
+@property (nonatomic, copy) NSString *firstName;
+@property (nonatomic, copy) NSString *lastName;
+@property (nonatomic, copy) NSString *nickName;
+@property (nonatomic, copy) NSString *city;
+@property (nonatomic, copy) NSString *gender;
 
 - (NSString *)displayName;
 

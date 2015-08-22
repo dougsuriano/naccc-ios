@@ -76,42 +76,42 @@ typedef NS_ENUM(NSUInteger, DCBTransactionType) {
         [[TWMessageBarManager sharedInstance] hideAll];
     }
     
-    [[_currentStateView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [[self.currentStateView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
     UIView *view;
     switch (state) {
         case DCBCheckpointControlStateRacerNumber:
-            view = _racerNumberView;
+            view = self.racerNumberView;
             break;
         case DCBCheckpointControlStatePickOrDrop:
-            view = _pickOrDropView;
+            view = self.pickOrDropView;
             break;
         case DCBCheckpointControlStatePickJobNumber:
-            view = _pickJobNumberView;
+            view = self.pickJobNumberView;
             break;
         case DCBCheckpointControlStatePickConfirm:
-            view = _pickConfirmView;
+            view = self.pickConfirmView;
             break;
         case DCBCheckpointControlStateDropNumber:
-            view = _dropConfirmCodeView;
+            view = self.dropConfirmCodeView;
             break;
     }
-    [_currentStateView addSubview:view];
+    [self.currentStateView addSubview:view];
     [self setCurrentState:@(state)];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    if ([_currentState integerValue] == DCBCheckpointControlStateRacerNumber) {
+    if ([self.currentState integerValue] == DCBCheckpointControlStateRacerNumber) {
         [self.navigationItem setHidesBackButton:NO];
-        [_racerNumberField becomeFirstResponder];
+        [self.racerNumberField becomeFirstResponder];
     }
-    else if ([_currentState integerValue] == DCBCheckpointControlStatePickJobNumber) {
-        [_jobNumberField setText:@""];
-        [_jobNumberField becomeFirstResponder];
+    else if ([self.currentState integerValue] == DCBCheckpointControlStatePickJobNumber) {
+        [self.jobNumberField setText:@""];
+        [self.jobNumberField becomeFirstResponder];
     }
-    else if ([_currentState integerValue] == DCBCheckpointControlStateDropNumber) {
-        [_confirmCodeField setText:@""];
-        [_confirmCodeField becomeFirstResponder];
+    else if ([self.currentState integerValue] == DCBCheckpointControlStateDropNumber) {
+        [self.confirmCodeField setText:@""];
+        [self.confirmCodeField becomeFirstResponder];
     }
     else {
         [self.navigationItem setHidesBackButton:YES];
@@ -121,46 +121,46 @@ typedef NS_ENUM(NSUInteger, DCBTransactionType) {
 #pragma mark lookup Racer
 - (IBAction)lookupRacer:(id)sender
 {
-    if ([[_racerNumberField text] length] == 0) {
+    if ([[self.racerNumberField text] length] == 0) {
         return;
     }
     
-    NSNumber *racerNumber = @([[_racerNumberField text] integerValue]);
+    NSNumber *racerNumber = @([[self.racerNumberField text] integerValue]);
     [[TWMessageBarManager sharedInstance] hideAll];
     [self showLoadingHUD];
     [[DCBAPIManager sharedManager] getRacerWithRacerNumber:racerNumber success:^(DCBRacer *racer) {
-        _currentRacer = racer;
+        self.currentRacer = racer;
         [self changeToControlState:DCBCheckpointControlStatePickOrDrop hideMessageBar:YES];
-        [_racerNumberField setText:@""];
+        [self.racerNumberField setText:@""];
         [self hideLoadingHUD];
-        [_racerNameLabel setText:[_currentRacer displayName]];
+        [self.racerNameLabel setText:[self.currentRacer displayName]];
     } failure:^(NSError *error) {
         [self hideLoadingHUD];
         [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Cannot Find Racer"
                                                        description:@"Cannot find racer. Please try again"
                                                               type:TWMessageBarMessageTypeError
          ];
-        [_racerNumberField setText:@""];
-        [_racerNumberField becomeFirstResponder];
+        [self.racerNumberField setText:@""];
+        [self.racerNumberField becomeFirstResponder];
     }];
 }
 
 #pragma mark Pick or Drop
 - (IBAction)wrongRacer:(id)sender
 {
-    _currentRacer = nil;
+    self.currentRacer = nil;
     [self changeToControlState:DCBCheckpointControlStateRacerNumber hideMessageBar:YES];
 }
 
 - (IBAction)pick:(id)sender
 {
-    _transactionType = DCBTransactionTypePick;
+    self.transactionType = DCBTransactionTypePick;
     [self changeToControlState:DCBCheckpointControlStatePickJobNumber hideMessageBar:YES];
 }
 
 - (IBAction)drop:(id)sender
 {
-    _transactionType = DCBTransactionTypeDrop;
+    self.transactionType = DCBTransactionTypeDrop;
     [self changeToControlState:DCBCheckpointControlStateDropNumber hideMessageBar:YES];
 }
 
@@ -169,14 +169,14 @@ typedef NS_ENUM(NSUInteger, DCBTransactionType) {
 {
     [[TWMessageBarManager sharedInstance] hideAll];
     [self showLoadingHUD];
-    [[DCBAPIManager sharedManager] racerNumber:_currentRacer.racerNumber
-                            pickupAtCheckpoint:_currentCheckpoint.checkpointNumber
-                                     jobNumber:@([[_jobNumberField text] integerValue])
+    [[DCBAPIManager sharedManager] racerNumber:self.currentRacer.racerNumber
+                            pickupAtCheckpoint:self.currentCheckpoint.checkpointNumber
+                                     jobNumber:@([[self.jobNumberField text] integerValue])
                                        success:^(NSString *confirmCode) {
                                            [self hideLoadingHUD];
-                                           [_jobNumberField setText:@""];
-                                           [_confirmCodeLabel setText:confirmCode];
-                                           [self updateLastConfirmCode:confirmCode racer:_currentRacer];
+                                           [self.jobNumberField setText:@""];
+                                           [self.confirmCodeLabel setText:confirmCode];
+                                           [self updateLastConfirmCode:confirmCode racer:self.currentRacer];
                                            [self changeToControlState:DCBCheckpointControlStatePickConfirm hideMessageBar:YES];
                                        }
                                     inputError:^(NSString *errorTitle, NSString *errorDescription) {
@@ -207,12 +207,12 @@ typedef NS_ENUM(NSUInteger, DCBTransactionType) {
 - (IBAction)confirmCodeEnter:(id)sender
 {
     [self showLoadingHUD];
-    [[DCBAPIManager sharedManager] racerNumber:_currentRacer.racerNumber
-                           dropOffAtCheckpoint:_currentCheckpoint.checkpointNumber
-                                   confirmCode:@([[_confirmCodeField text] integerValue])
+    [[DCBAPIManager sharedManager] racerNumber:self.currentRacer.racerNumber
+                           dropOffAtCheckpoint:self.currentCheckpoint.checkpointNumber
+                                   confirmCode:@([[self.confirmCodeField text] integerValue])
                                                   success:^{
                                                       [self hideLoadingHUD];
-                                                      NSString *successMessage = [NSString stringWithFormat:@"%@ successfully dropped off package with confirm code %@", [_currentRacer racerNumber], [_confirmCodeField text]];
+                                                      NSString *successMessage = [NSString stringWithFormat:@"%@ successfully dropped off package with confirm code %@", [self.currentRacer racerNumber], [self.confirmCodeField text]];
                                                       [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Success!"
                                                                                                      description:successMessage
                                                                                                             type:TWMessageBarMessageTypeSuccess
@@ -268,18 +268,18 @@ typedef NS_ENUM(NSUInteger, DCBTransactionType) {
 
 - (void)updateLastConfirmCode:(NSString *)code racer:(DCBRacer *)racer
 {
-    if (!_lastConfirmCode) {
+    if (!self.lastConfirmCode) {
         UIBarButtonItem *last = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"rewind"] style:UIBarButtonItemStylePlain target:self action:@selector(showLastConfirmCode:)];
         [self.navigationItem setRightBarButtonItem:last];
     }
     
-    _lastConfirmCode = code;
-    _lastRacer = racer;
+    self.lastConfirmCode = code;
+    self.lastRacer = racer;
 }
 
 - (IBAction)showLastConfirmCode:(id)sender
 {
-    NSString *lastMessage = [NSString stringWithFormat:@"Racer #%@ (%@)'s confirm code was %@", _lastRacer.racerNumber, _lastRacer.firstName, _lastConfirmCode];
+    NSString *lastMessage = [NSString stringWithFormat:@"Racer #%@ (%@)'s confirm code was %@", self.lastRacer.racerNumber, self.lastRacer.firstName, self.lastConfirmCode];
     [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Last Drop Confirm Code"
                                                    description:lastMessage
                                                           type:TWMessageBarMessageTypeInfo

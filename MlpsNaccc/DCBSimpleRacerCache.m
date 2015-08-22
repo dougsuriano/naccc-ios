@@ -21,22 +21,22 @@
 {
     self = [super init];
     if (self) {
-        _racerCache = [[NSCache alloc] init];
+        self.racerCache = [[NSCache alloc] init];
     }
     return self;
 }
 
 - (DCBRacer *)cachedRacerOrNilForRacerNumber:(NSNumber *)racerNumber
 {
-    if ([_racerCache objectForKey:racerNumber]) {
-        return [_racerCache objectForKey:racerNumber];
+    if ([self.racerCache objectForKey:racerNumber]) {
+        return [self.racerCache objectForKey:racerNumber];
     }
     return nil;
 }
 
 - (void)cacheRacer:(DCBRacer *)racer
 {
-    [_racerCache setObject:racer forKey:[racer racerNumber]];
+    [self.racerCache setObject:racer forKey:[racer racerNumber]];
 }
 
 @end

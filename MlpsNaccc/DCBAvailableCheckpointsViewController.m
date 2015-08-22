@@ -28,15 +28,6 @@
 
 @implementation DCBAvailableCheckpointsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -55,41 +46,41 @@
 
 - (void)setupTableView
 {
-    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    [_tableView setDelegate:self];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableView setDelegate:self];
 }
 
 - (void)setupRefreshControl
 {
-    _refreshControl = [[UIRefreshControl alloc] init];
-    [_refreshControl addTarget:self action:@selector(reloadAvailableCheckpoints) forControlEvents:UIControlEventValueChanged];
-    [_tableView addSubview:_refreshControl];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(reloadAvailableCheckpoints) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
 }
 
 - (void)reloadAvailableCheckpoints
 {
-    [_refreshControl beginRefreshing];
+    [self.refreshControl beginRefreshing];
     [[DCBAPIManager sharedManager] getListOfCheckpoints:^(NSArray *checkpoints) {
-        _dataSource = [[DCBArrayTableDataSource alloc] initWithArray:checkpoints
+        self.dataSource = [[DCBArrayTableDataSource alloc] initWithArray:checkpoints
                                                                       cellIdentifier:@"cell"
                                                                   configureCellBlock:^(id cell, id item) {
                                                                       UITableViewCell *theCell = cell;
                                                                       DCBCheckpoint *checkpoint = item;
                                                                       theCell.textLabel.text = checkpoint.checkpointName;
                                                                   }];
-        [_tableView setDataSource:_dataSource];
-        [_tableView reloadData];
-        [_refreshControl endRefreshing];
+        [self.tableView setDataSource:self.dataSource];
+        [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
     } failure:^(NSError *error) {
-        [_refreshControl endRefreshing];
+        [self.refreshControl endRefreshing];
     }];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([indexPath row] < [_dataSource numberOfItems]) {
-        [_tableView deselectRowAtIndexPath:indexPath animated:YES];
-        DCBCheckpointControlViewController *vc = [[DCBCheckpointControlViewController alloc] initWithCheckpoint:[_dataSource itemAtIndexPath:indexPath]];
+    if ([indexPath row] < [self.dataSource numberOfItems]) {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+        DCBCheckpointControlViewController *vc = [[DCBCheckpointControlViewController alloc] initWithCheckpoint:[self.dataSource itemAtIndexPath:indexPath]];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

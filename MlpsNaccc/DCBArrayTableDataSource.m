@@ -31,25 +31,25 @@
 
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return _items[indexPath.row];
+    return self.items[indexPath.row];
 }
 
 - (NSInteger)numberOfItems
 {
-    return _items.count;
+    return self.items.count;
 }
 
 #pragma mark UITableView Datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _items.count;
+    return self.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    id cell = [tableView dequeueReusableCellWithIdentifier:_identifier forIndexPath:indexPath];
+    id cell = [tableView dequeueReusableCellWithIdentifier:self.identifier forIndexPath:indexPath];
     id item = [self itemAtIndexPath:indexPath];
-    _configureBlock(cell, item);
+    self.configureBlock(cell, item);
     return cell;
 }
 

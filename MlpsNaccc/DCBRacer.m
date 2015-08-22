@@ -12,10 +12,10 @@
 
 - (NSString *)displayName
 {
-    if ([_nickName length] > 0) {
-        return [NSString stringWithFormat:@"%@ %@ %@", _firstName, _nickName, _lastName];
+    if ([self.nickName length] > 0) {
+        return [NSString stringWithFormat:@"%@ %@ %@", self.firstName, self.nickName, self.lastName];
     }
-    return [NSString stringWithFormat:@"%@ %@", _firstName, _lastName];
+    return [NSString stringWithFormat:@"%@ %@", self.firstName, self.lastName];
 }
 
 @end

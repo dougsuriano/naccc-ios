@@ -40,10 +40,10 @@
 - (IBAction)login:(id)sender
 {
     [self disableUserInput];
-    [[DCBAPIManager sharedManager] obtainOAuthTokenWithUsername:_usernameField.text password:_passwordField.text success:^(NSString *token) {
+    [[DCBAPIManager sharedManager] obtainOAuthTokenWithUsername:self.usernameField.text password:self.passwordField.text success:^(NSString *token) {
         [self enableUserInput];
-        [_usernameField setText:@""];
-        [_passwordField setText:@""];
+        [self.usernameField setText:@""];
+        [self.passwordField setText:@""];
         [self userLoggedIn];
             } failure:^(NSError *error) {
         [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"Error Logging In"
@@ -55,16 +55,16 @@
 
 - (void)enableUserInput
 {
-    [_usernameField setEnabled:YES];
-    [_passwordField setEnabled:YES];
-    [_loginButton setEnabled:YES];
+    [self.usernameField setEnabled:YES];
+    [self.passwordField setEnabled:YES];
+    [self.loginButton setEnabled:YES];
 }
 
 - (void)disableUserInput
 {
-    [_usernameField setEnabled:NO];
-    [_passwordField setEnabled:NO];
-    [_loginButton setEnabled:NO];
+    [self.usernameField setEnabled:NO];
+    [self.passwordField setEnabled:NO];
+    [self.loginButton setEnabled:NO];
     [self.view endEditing:YES];
 }
 
@@ -75,7 +75,7 @@
         [self userLoggedIn];
     } failure:^(NSError *error) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
-        [_usernameField becomeFirstResponder];
+        [self.usernameField becomeFirstResponder];
     }];
 }
 
